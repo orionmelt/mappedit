@@ -1,4 +1,6 @@
 import "./App.css";
+import { GoogleMapsOverlay } from "@deck.gl/google-maps";
+import { ScatterplotLayer } from "@deck.gl/layers";
 
 function App() {
   return (
