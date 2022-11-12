@@ -1,10 +1,30 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
+
+.App>div, #sidebar, #map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.App>div>div {
+  height: 100%;
+} 
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.markerInfo {
+  position: absolute;
+  width: 512px;
+  height: 256px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  transform: translate(-50%, -100%);
 }
 
 @media (prefers-reduced-motion: no-preference) {
