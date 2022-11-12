@@ -2,6 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import { GoogleMapsOverlay } from "@deck.gl/google-maps";
 import { ScatterplotLayer } from "@deck.gl/layers";
+import "./Map.css";
 
 const DEFAULT_CENTER = [39.50024, -98.350891];
 const DEFAULT_ZOOM = 4;
