@@ -10,34 +10,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
+      places: null,
       selectedItem: null,
       subredditData: null,
       center: [0,0]
     };
     fetch("data.json")
       .then((response) => response.json())
-      .then((data) => this.init(data));
-  }
-
-  init = (data) => {
-    const expandedData = data.map(d => {
-      let places = [];
-      d.subreddits.forEach(s => {
-        places.push({
-          name: d.name,
-          type: d.type,
-          lat: d.lat,
-          lng: d.lng,
-          subreddit: s.name,
-          subscribers: s.subscribers
-        });
-      });
-      return places;
-    }).flat();
-    this.setState({
-      data: expandedData
-    });
+      .then((data) => this.setState({places: data}));
   }
 
   onMarkerClick = (info, event) => {
@@ -62,9 +42,13 @@ class App extends React.Component {
       selectedItem: null
     });
   }
+  getRadius = (d) => {
+    const totalSubscribers = d.subreddits.map(s => s.subscribers).reduce((a, b) => a+b, 0);
+    return Math.sqrt(totalSubscribers);
+  }
 
   onMapLoaded = (map, maps) => {
-    const data = this.state.data;
+    const data = this.state.places;
     const selectedItem = this.state.selectedItem;
     const deckOverlay = new GoogleMapsOverlay({
       layers: [
@@ -75,16 +59,14 @@ class App extends React.Component {
           opacity: 0.8,
           stroked: true,
           filled: true,
-          radiusScale: 32,
+          radiusScale: 100,
           radiusMinPixels: 1,
           radiusMaxPixels: 16,
           lineWidthMinPixels: 1,
           autoHighlight: true,
           getPosition: d => [d.lng, d.lat, 0],
-          getRadius: d => Math.sqrt(d.subscribers),
-          getFillColor: d => {
-            return d===selectedItem ? [0,0,0] : [255, 140, 0];
-          },
+          getRadius: this.getRadius,
+          getFillColor: d => [255, 140, 0],
           getLineColor: d => [0, 0, 0],
           onClick: this.onMarkerClick,
         })
@@ -94,14 +76,14 @@ class App extends React.Component {
   }
 
   render() {
-    const data = this.state.data;
+    const places = this.state.places;
     const subreddit = this.state.selectedItem;
     const subData = this.state.subredditData;
     const center = this.state.center;
     return (
       <div className="App">
         <div id="map-container">
-          {data &&
+          {places &&
           <GoogleMapReact
             bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
             center={center}
