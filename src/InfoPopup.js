@@ -1,5 +1,6 @@
 import React from "react";
 import SubredditCard from "./SubredditCard";
+import Carousel from "nuka-carousel";
 import "./InfoPopup.css";
 
 class InfoPopup extends React.Component {
@@ -14,9 +15,9 @@ class InfoPopup extends React.Component {
   
   render() {
     const carousel = (
-      <div id="carousel">
+      <Carousel>
         {this.state.subreddits.map((s, i) => <SubredditCard key={i} subreddit={s} />)}
-      </div>
+      </Carousel>
     );
     return (
       <div className="infoPopup">
