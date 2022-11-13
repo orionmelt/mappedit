@@ -1,7 +1,6 @@
 .infoPopup {
   position: absolute;
   width: 256px;
-  min-height: 300px;
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
