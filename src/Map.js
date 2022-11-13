@@ -2,6 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import { GoogleMapsOverlay } from "@deck.gl/google-maps";
 import { ScatterplotLayer } from "@deck.gl/layers";
+import InfoPopup from "./InfoPopup";
 import "./Map.css";
 
 const DEFAULT_CENTER = [39.50024, -98.350891];
@@ -20,7 +21,7 @@ class Map extends React.Component {
 
   getRadius = (place) => {
     const totalSubscribers = place.subreddits.map(s => s.subscribers).reduce((a, b) => a+b, 0);
-    return Math.sqrt(totalSubscribers);
+    return Math.log(totalSubscribers);
   }
 
   unselectPlace = () => {
@@ -45,7 +46,7 @@ class Map extends React.Component {
           opacity: 0.8,
           stroked: true,
           filled: true,
-          radiusScale: 100,
+          radiusScale: 4096,
           radiusMinPixels: 1,
           radiusMaxPixels: 16,
           lineWidthMinPixels: 1,
@@ -74,13 +75,13 @@ class Map extends React.Component {
           onGoogleApiLoaded={({map, maps}) => this.onMapLoaded(map, maps)}
         >
           {selectedPlace &&
-            <div
+            <InfoPopup
               key={selectedPlace.id}
               lat={selectedPlace.lat}
               lng={selectedPlace.lng}
-            >
-              TBD
-            </div>
+              subreddits={selectedPlace.subreddits}
+              onClose={this.unselectPlace}
+            />
           }
         </GoogleMapReact>
       </div>
