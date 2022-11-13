@@ -4,6 +4,9 @@
   "homepage": "https://orionmelt.github.io/mappedit",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.13",
     "deck.gl": "^8.8.18",
     "google-map-react": "^2.2.0",
     "he": "^1.2.0",

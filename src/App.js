@@ -1,5 +1,7 @@
 import React from "react";
 import Map from "./Map";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import "./App.css";
 
 class App extends React.Component {
@@ -14,10 +16,8 @@ class App extends React.Component {
       .then((data) => this.setState({places: data}));
   }
 
-  toggleView = () => {
-    this.setState((state, props) => ({
-      view: (state.view === "scatterplot" ? "text" : "scatterplot")
-    }));
+  toggleView = (event, view) => {
+    this.setState({view: view});
   }
 
   render() {
@@ -25,7 +25,17 @@ class App extends React.Component {
     const view = this.state.view;
     return (
       <div className="App">
-        <div><button onClick={this.toggleView}>Toggle</button></div>
+        <ToggleButtonGroup
+          size="small"
+          color="primary"
+          value={view}
+          exclusive
+          onChange={this.toggleView}
+          aria-label="Map plot mode"
+        >
+          <ToggleButton value="scatterplot" aria-label="scatterplot">Scatterplot</ToggleButton>
+          <ToggleButton value="text" aria-label="text">Text</ToggleButton>
+        </ToggleButtonGroup>
         {places ? <Map key={view} places={places} view={view} /> : <div>Loading...</div> }
       </div>
     );
