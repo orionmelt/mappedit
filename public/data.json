@@ -2800,5 +2800,629 @@
         "last_post_utc": "1668118752"
       }
     ]
+  },
+  {
+    "lat": 61.385,
+    "lng": -152.2683,
+    "subreddits": [
+      {
+        "name": "alaska",
+        "subscribers": 70671,
+        "created_utc": "1205448591",
+        "last_post_utc": "1619483718"
+      }
+    ]
+  },
+  {
+    "lat": 32.799,
+    "lng": -86.8073,
+    "subreddits": [
+      {
+        "name": "alabama",
+        "subscribers": 146596,
+        "created_utc": "1231127736",
+        "last_post_utc": "1668202622"
+      }
+    ]
+  },
+  {
+    "lat": 34.9513,
+    "lng": -92.3809,
+    "subreddits": [
+      {
+        "name": "arkansas",
+        "subscribers": 50223,
+        "created_utc": "1225496744",
+        "last_post_utc": "1657050326"
+      }
+    ]
+  },
+  {
+    "lat": 33.7712,
+    "lng": -111.3877,
+    "subreddits": [
+      {
+        "name": "arizona",
+        "subscribers": 269051,
+        "created_utc": "1222819634",
+        "last_post_utc": "1667836809"
+      }
+    ]
+  },
+  {
+    "lat": 36.17,
+    "lng": -119.7462,
+    "subreddits": [
+      {
+        "name": "california",
+        "subscribers": 413907,
+        "created_utc": "1208166984",
+        "last_post_utc": "1619732862"
+      },
+      {
+        "name": "Golden_State",
+        "subscribers": 2893,
+        "created_utc": "1596251270",
+        "last_post_utc": "1597644140"
+      }
+    ]
+  },
+  {
+    "lat": 39.0646,
+    "lng": -105.3272,
+    "subreddits": [
+      {
+        "name": "colorado",
+        "subscribers": 304050,
+        "created_utc": "1205957274",
+        "last_post_utc": "1668187222"
+      }
+    ]
+  },
+  {
+    "lat": 41.5834,
+    "lng": -72.7622,
+    "subreddits": [
+      {
+        "name": "connecticut",
+        "subscribers": 300517,
+        "created_utc": "1214676165",
+        "last_post_utc": "1667956829"
+      }
+    ]
+  },
+  {
+    "lat": 39.3498,
+    "lng": -75.5148,
+    "subreddits": [
+      {
+        "name": "delaware",
+        "subscribers": 84847,
+        "created_utc": "1241799524",
+        "last_post_utc": "1617747121"
+      }
+    ]
+  },
+  {
+    "lat": 27.8333,
+    "lng": -81.717,
+    "subreddits": [
+      {
+        "name": "florida",
+        "subscribers": 238084,
+        "created_utc": "1201285953",
+        "last_post_utc": "1667910913"
+      }
+    ]
+  },
+  {
+    "lat": 32.9866,
+    "lng": -83.6487,
+    "subreddits": [
+      {
+        "name": "georgia",
+        "subscribers": 164627,
+        "created_utc": "1218810753",
+        "last_post_utc": "1656091260"
+      },
+      {
+        "name": "georgiausa",
+        "subscribers": 48,
+        "created_utc": "1259088777",
+        "last_post_utc": "1657057339"
+      }
+    ]
+  },
+  {
+    "lat": 21.1098,
+    "lng": -157.5311,
+    "subreddits": [
+      {
+        "name": "hawaii",
+        "subscribers": 109891,
+        "created_utc": "1211856368",
+        "last_post_utc": "1668201069"
+      }
+    ]
+  },
+  {
+    "lat": 42.0046,
+    "lng": -93.214,
+    "subreddits": [
+      {
+        "name": "iowa",
+        "subscribers": 58700,
+        "created_utc": "1222781643",
+        "last_post_utc": "1600050471"
+      }
+    ]
+  },
+  {
+    "lat": 44.2394,
+    "lng": -114.5103,
+    "subreddits": [
+      {
+        "name": "idaho",
+        "subscribers": 41075,
+        "created_utc": "1235720517",
+        "last_post_utc": "1649448896"
+      }
+    ]
+  },
+  {
+    "lat": 40.3363,
+    "lng": -89.0022,
+    "subreddits": [
+      {
+        "name": "illinois",
+        "subscribers": 161796,
+        "created_utc": "1204919117",
+        "last_post_utc": "1663012957"
+      }
+    ]
+  },
+  {
+    "lat": 39.8647,
+    "lng": -86.2604,
+    "subreddits": [
+      {
+        "name": "indiana",
+        "subscribers": 256803,
+        "created_utc": "1223158744",
+        "last_post_utc": "1668218864"
+      }
+    ]
+  },
+  {
+    "lat": 38.5111,
+    "lng": -96.8005,
+    "subreddits": [
+      {
+        "name": "kansas",
+        "subscribers": 56822,
+        "created_utc": "1254258152",
+        "last_post_utc": "1668180400"
+      }
+    ]
+  },
+  {
+    "lat": 37.669,
+    "lng": -84.6514,
+    "subreddits": [
+      {
+        "name": "kentucky",
+        "subscribers": 153310,
+        "created_utc": "1225771922",
+        "last_post_utc": "1667952705"
+      }
+    ]
+  },
+  {
+    "lat": 31.1801,
+    "lng": -91.8749,
+    "subreddits": [
+      {
+        "name": "louisiana",
+        "subscribers": 52521,
+        "created_utc": "1231704830",
+        "last_post_utc": "1668212372"
+      }
+    ]
+  },
+  {
+    "lat": 42.2373,
+    "lng": -71.5314,
+    "subreddits": [
+      {
+        "name": "massachusetts",
+        "subscribers": 216860,
+        "created_utc": "1216654114",
+        "last_post_utc": "1628160316"
+      },
+      {
+        "name": "mass",
+        "subscribers": 399,
+        "created_utc": "1241368227",
+        "last_post_utc": "1587174895"
+      }
+    ]
+  },
+  {
+    "lat": 39.0724,
+    "lng": -76.7902,
+    "subreddits": [
+      {
+        "name": "maryland",
+        "subscribers": 198077,
+        "created_utc": "1224538760",
+        "last_post_utc": "1667669410"
+      }
+    ]
+  },
+  {
+    "lat": 44.6074,
+    "lng": -69.3977,
+    "subreddits": [
+      {
+        "name": "maine",
+        "subscribers": 82841,
+        "created_utc": "1235502076",
+        "last_post_utc": "1660579295"
+      }
+    ]
+  },
+  {
+    "lat": 43.3504,
+    "lng": -84.5603,
+    "subreddits": [
+      {
+        "name": "michigan",
+        "subscribers": 364575,
+        "created_utc": "1208373516",
+        "last_post_utc": "1667962242"
+      }
+    ]
+  },
+  {
+    "lat": 45.7326,
+    "lng": -93.9196,
+    "subreddits": [
+      {
+        "name": "minnesota",
+        "subscribers": 247274,
+        "created_utc": "1210211105",
+        "last_post_utc": "1666627548"
+      }
+    ]
+  },
+  {
+    "lat": 38.4623,
+    "lng": -92.302,
+    "subreddits": [
+      {
+        "name": "missouri",
+        "subscribers": 82151,
+        "created_utc": "1204319158",
+        "last_post_utc": "1668184357"
+      }
+    ]
+  },
+  {
+    "lat": 32.7673,
+    "lng": -89.6812,
+    "subreddits": [
+      {
+        "name": "mississippi",
+        "subscribers": 86520,
+        "created_utc": "1205599160",
+        "last_post_utc": "1664364297"
+      }
+    ]
+  },
+  {
+    "lat": 46.9048,
+    "lng": -110.3261,
+    "subreddits": [
+      {
+        "name": "montana",
+        "subscribers": 50206,
+        "created_utc": "1236456941",
+        "last_post_utc": "1668213298"
+      }
+    ]
+  },
+  {
+    "lat": 35.6411,
+    "lng": -79.8431,
+    "subreddits": [
+      {
+        "name": "northcarolina",
+        "subscribers": 379960,
+        "created_utc": "1206372151",
+        "last_post_utc": "1668206405"
+      }
+    ]
+  },
+  {
+    "lat": 47.5362,
+    "lng": -99.793,
+    "subreddits": [
+      {
+        "name": "northdakota",
+        "subscribers": 32473,
+        "created_utc": "1244659282",
+        "last_post_utc": "1668239620"
+      }
+    ]
+  },
+  {
+    "lat": 41.1289,
+    "lng": -98.2883,
+    "subreddits": [
+      {
+        "name": "nebraska",
+        "subscribers": 39499,
+        "created_utc": "1225944610",
+        "last_post_utc": "1665007772"
+      }
+    ]
+  },
+  {
+    "lat": 43.4108,
+    "lng": -71.5653,
+    "subreddits": [
+      {
+        "name": "newhampshire",
+        "subscribers": 83973,
+        "created_utc": "1269919410",
+        "last_post_utc": "1660245107"
+      }
+    ]
+  },
+  {
+    "lat": 40.314,
+    "lng": -74.5089,
+    "subreddits": [
+      {
+        "name": "newjersey",
+        "subscribers": 415176,
+        "created_utc": "1208092249",
+        "last_post_utc": "1667278809"
+      }
+    ]
+  },
+  {
+    "lat": 34.8375,
+    "lng": -106.2371,
+    "subreddits": [
+      {
+        "name": "newmexico",
+        "subscribers": 39256,
+        "created_utc": "1256579938",
+        "last_post_utc": "1668176309"
+      }
+    ]
+  },
+  {
+    "lat": 38.4199,
+    "lng": -117.1219,
+    "subreddits": [
+      {
+        "name": "nevada",
+        "subscribers": 54576,
+        "created_utc": "1273554715",
+        "last_post_utc": "1668217191"
+      }
+    ]
+  },
+  {
+    "lat": 42.1497,
+    "lng": -74.9384,
+    "subreddits": [
+      {
+        "name": "newyork",
+        "subscribers": 59273,
+        "created_utc": "1201243952",
+        "last_post_utc": "1668208226"
+      },
+      {
+        "name": "empirestate",
+        "subscribers": 38,
+        "created_utc": "1339120565",
+        "last_post_utc": "1663632504"
+      }
+    ]
+  },
+  {
+    "lat": 40.3736,
+    "lng": -82.7755,
+    "subreddits": [
+      {
+        "name": "ohio",
+        "subscribers": 346478,
+        "created_utc": "1223158019",
+        "last_post_utc": "1667910152"
+      }
+    ]
+  },
+  {
+    "lat": 35.5376,
+    "lng": -96.9247,
+    "subreddits": [
+      {
+        "name": "oklahoma",
+        "subscribers": 92979,
+        "created_utc": "1235348124",
+        "last_post_utc": "1668214657"
+      }
+    ]
+  },
+  {
+    "lat": 44.5672,
+    "lng": -122.1269,
+    "subreddits": [
+      {
+        "name": "oregon",
+        "subscribers": 165002,
+        "created_utc": "1205824431",
+        "last_post_utc": "1667359811"
+      }
+    ]
+  },
+  {
+    "lat": 40.5773,
+    "lng": -77.264,
+    "subreddits": [
+      {
+        "name": "pennsylvania",
+        "subscribers": 344860,
+        "created_utc": "1223156476",
+        "last_post_utc": "1667965009"
+      }
+    ]
+  },
+  {
+    "lat": 41.6772,
+    "lng": -71.5101,
+    "subreddits": [
+      {
+        "name": "rhodeisland",
+        "subscribers": 77085,
+        "created_utc": "1260917519",
+        "last_post_utc": "1631067540"
+      }
+    ]
+  },
+  {
+    "lat": 33.8191,
+    "lng": -80.9066,
+    "subreddits": [
+      {
+        "name": "southcarolina",
+        "subscribers": 164687,
+        "created_utc": "1231509258",
+        "last_post_utc": "1668213698"
+      }
+    ]
+  },
+  {
+    "lat": 44.2853,
+    "lng": -99.4632,
+    "subreddits": [
+      {
+        "name": "southdakota",
+        "subscribers": 18272,
+        "created_utc": "1233876876",
+        "last_post_utc": "1668106434"
+      }
+    ]
+  },
+  {
+    "lat": 35.7449,
+    "lng": -86.7489,
+    "subreddits": [
+      {
+        "name": "tennessee",
+        "subscribers": 82390,
+        "created_utc": "1241673636",
+        "last_post_utc": "1668185724"
+      }
+    ]
+  },
+  {
+    "lat": 31.106,
+    "lng": -97.6475,
+    "subreddits": [
+      {
+        "name": "texas",
+        "subscribers": 463675,
+        "created_utc": "1206596233",
+        "last_post_utc": "1668207905"
+      }
+    ]
+  },
+  {
+    "lat": 40.1135,
+    "lng": -111.8535,
+    "subreddits": [
+      {
+        "name": "utah",
+        "subscribers": 107031,
+        "created_utc": "1239318727",
+        "last_post_utc": "1668218717"
+      }
+    ]
+  },
+  {
+    "lat": 37.768,
+    "lng": -78.2057,
+    "subreddits": [
+      {
+        "name": "virginia",
+        "subscribers": 259560,
+        "created_utc": "1213848505",
+        "last_post_utc": "1618524427"
+      }
+    ]
+  },
+  {
+    "lat": 44.0407,
+    "lng": -72.7093,
+    "subreddits": [
+      {
+        "name": "vermont",
+        "subscribers": 75209,
+        "created_utc": "1230071390",
+        "last_post_utc": "1658765671"
+      }
+    ]
+  },
+  {
+    "lat": 47.3917,
+    "lng": -121.5708,
+    "subreddits": [
+      {
+        "name": "washington",
+        "subscribers": 136624,
+        "created_utc": "1215655278",
+        "last_post_utc": "1651429368"
+      }
+    ]
+  },
+  {
+    "lat": 44.2563,
+    "lng": -89.6385,
+    "subreddits": [
+      {
+        "name": "Wisconsin",
+        "subscribers": 206682,
+        "created_utc": "1231857811",
+        "last_post_utc": "1668198016"
+      }
+    ]
+  },
+  {
+    "lat": 38.468,
+    "lng": -80.9696,
+    "subreddits": [
+      {
+        "name": "westvirginia",
+        "subscribers": 110821,
+        "created_utc": "1263183458",
+        "last_post_utc": "1668184183"
+      }
+    ]
+  },
+  {
+    "lat": 42.7475,
+    "lng": -107.2085,
+    "subreddits": [
+      {
+        "name": "Wyoming",
+        "subscribers": 23102,
+        "created_utc": "1250578638",
+        "last_post_utc": "1667937610"
+      }
+    ]
   }
 ]
