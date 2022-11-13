@@ -6,18 +6,27 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      places: null
+      places: null,
+      view: "scatterplot"
     };
     fetch("data.json")
       .then((response) => response.json())
       .then((data) => this.setState({places: data}));
   }
 
+  toggleView = () => {
+    this.setState((state, props) => ({
+      view: (state.view === "scatterplot" ? "text" : "scatterplot")
+    }));
+  }
+
   render() {
     const places = this.state.places;
+    const view = this.state.view;
     return (
       <div className="App">
-        {places ? <Map places={places} /> : <div>Loading...</div> }
+        <div><button onClick={this.toggleView}>Toggle</button></div>
+        {places ? <Map key={view} places={places} view={view} /> : <div>Loading...</div> }
       </div>
     );
   }
