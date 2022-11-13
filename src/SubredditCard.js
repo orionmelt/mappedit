@@ -1,5 +1,6 @@
 import React from "react";
 import he from "he";
+import redditLogo from "./reddit-logo.png";
 
 const cache = {};
 
@@ -36,7 +37,7 @@ class SubredditCard extends React.Component {
         <div>{subreddit.subscribers}</div>
         {about && 
           <div>
-            <img witdh={256} alt={subreddit.name} src={he.decode(about.data.icon_img || about.data.community_icon)} />
+            <img witdh={256} height={256} alt={subreddit.name} src={he.decode(about.data.icon_img || about.data.community_icon || about.data.banner_img || redditLogo)} />
           </div>
         }
       </div>
