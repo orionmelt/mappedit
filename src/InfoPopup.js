@@ -6,9 +6,9 @@ import "./InfoPopup.css";
 class InfoPopup extends React.Component {
   constructor(props) {
     super(props);
-    const {subreddits, onClose} = props;
+    const {place, onClose} = props;
     this.state = {
-      subreddits: subreddits,
+      subreddits: place.subreddits,
       onClose: onClose
     };
   }

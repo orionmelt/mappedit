@@ -246,7 +246,7 @@ class Map extends React.Component {
 
   getRadius = (place) => {
     const totalSubscribers = place.subreddits.map(s => s.subscribers).reduce((a, b) => a+b, 0);
-    return (Math.log(totalSubscribers)/Math.LN10)*10;
+    return Math.log10(totalSubscribers);
   }
 
   unselectPlace = () => {
@@ -254,6 +254,7 @@ class Map extends React.Component {
   }
 
   onMarkerClick = (info, event) => {
+    this.setState({selectedPlace: null});
     this.setState({
       selectedPlace: info.object,
       mapCenter: [info.object.lat, info.object.lng]
@@ -271,9 +272,10 @@ class Map extends React.Component {
           opacity: 0.8,
           stroked: true,
           filled: true,
-          radiusScale: 1000,
+          radiusScale: 1.2,
+          radiusUnits: "pixels",
           radiusMinPixels: 1,
-          radiusMaxPixels: 16,
+          radiusMaxPixels: 32,
           lineWidthMinPixels: 1,
           autoHighlight: true,
           getPosition: d => [d.lng, d.lat, 0],
@@ -305,7 +307,7 @@ class Map extends React.Component {
               key={selectedPlace.id}
               lat={selectedPlace.lat}
               lng={selectedPlace.lng}
-              subreddits={selectedPlace.subreddits}
+              place={selectedPlace}
               onClose={this.unselectPlace}
             />
           }
