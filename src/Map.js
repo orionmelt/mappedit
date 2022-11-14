@@ -232,7 +232,6 @@ const SCATTERPLOT_MAP_OPTIONS = {
     }
   ]
 };
-
 const TEXT_MAP_OPTIONS = {
   mapTypeControl: false,
   fullscreenControl: false,
@@ -463,7 +462,17 @@ const TEXT_MAP_OPTIONS = {
       ]
     }
   ]
-}
+};
+const COLOR_SCALE = [
+  [165, 214, 167],
+  [129, 199, 132],
+  [102, 187, 106],
+  [76, 175, 80],
+  [67, 160, 71],
+  [56, 142, 60],
+  [46, 125, 50],
+  [27, 94, 32]
+];
 
 class Map extends React.Component {
   constructor(props) {
@@ -477,9 +486,24 @@ class Map extends React.Component {
     };
   }
 
-  getRadius = (place) => {
+  convertScale = (value) => {
+    const sourceMin = 1, sourceMax = 365, targetMin = 1, targetMax = COLOR_SCALE.length;
+    const targetRange = targetMax - targetMin;
+    const sourceRange = sourceMax - sourceMin;
+    return (value-sourceMin)*targetRange/sourceRange+targetMin;
+  }
+
+  getSize = (place) => {
     const totalSubscribers = place.subreddits.map(s => s.subscribers).reduce((a, b) => a+b, 0);
     return Math.sqrt(totalSubscribers)/64;
+  }
+
+  getColor = (place) => {
+    const lastPostUtc = place.subreddits[0].last_post_utc;
+    const now = Math.floor(Date.now()/1000);
+    const numDaysSinceLastPost = (now-lastPostUtc)/3600/24;
+    const colorIndex = Math.floor(this.convertScale(numDaysSinceLastPost));
+    return COLOR_SCALE[colorIndex];
   }
 
   unselectPlace = (event) => {
@@ -513,8 +537,8 @@ class Map extends React.Component {
           lineWidthMinPixels: 1,
           autoHighlight: true,
           getPosition: d => [d.lng, d.lat, 0],
-          getRadius: this.getRadius,
-          getFillColor: d => [255, 140, 0],
+          getRadius: this.getSize,
+          getFillColor: this.getColor,
           getLineColor: d => [0, 0, 0],
           onClick: this.onMarkerClick
         })
@@ -528,12 +552,12 @@ class Map extends React.Component {
           pickable: true,
           getPosition: d => [d.lng, d.lat, 0],
           getText: d => d.subreddits.length === 1 ? `r/${d.subreddits[0].name}` : (`r/${d.subreddits[0].name} + ${d.subreddits.length-1} more`),
-          getSize: this.getRadius,
+          getSize: this.getSize,
           fontFamily: 'Roboto Condensed',
           sizeScale: 2.2,
-          sizeMinPixels: 10,
+          sizeMinPixels: 14,
           sizeMaxPixels: 32,
-          getColor: d => [255, 140, 0],
+          getColor: this.getColor,
           getAngle: 0,
           getTextAnchor: 'middle',
           getAlignmentBaseline: 'center',
