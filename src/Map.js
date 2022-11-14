@@ -479,7 +479,7 @@ class Map extends React.Component {
 
   getRadius = (place) => {
     const totalSubscribers = place.subreddits.map(s => s.subscribers).reduce((a, b) => a+b, 0);
-    return Math.log10(totalSubscribers);
+    return Math.sqrt(totalSubscribers)/64;
   }
 
   unselectPlace = () => {
@@ -505,9 +505,9 @@ class Map extends React.Component {
           opacity: 0.8,
           stroked: true,
           filled: true,
-          radiusScale: 1.2,
+          radiusScale: 1,
           radiusUnits: "pixels",
-          radiusMinPixels: 1,
+          radiusMinPixels: 4,
           radiusMaxPixels: 32,
           lineWidthMinPixels: 1,
           autoHighlight: true,
@@ -529,7 +529,9 @@ class Map extends React.Component {
           getText: d => d.subreddits.length === 1 ? `r/${d.subreddits[0].name}` : (`r/${d.subreddits[0].name} + ${d.subreddits.length-1} more`),
           getSize: this.getRadius,
           fontFamily: 'Roboto Condensed',
-          sizeScale: 2.5,
+          sizeScale: 2.2,
+          sizeMinPixels: 10,
+          sizeMaxPixels: 32,
           getColor: d => [255, 140, 0],
           getAngle: 0,
           getTextAnchor: 'middle',
