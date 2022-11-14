@@ -25,17 +25,34 @@ class App extends React.Component {
     const view = this.state.view;
     return (
       <div className="App">
-        <ToggleButtonGroup
-          size="small"
-          color="primary"
-          value={view}
-          exclusive
-          onChange={this.toggleView}
-          aria-label="Map plot mode"
-        >
-          <ToggleButton value="scatterplot" aria-label="scatterplot">Scatterplot</ToggleButton>
-          <ToggleButton value="text" aria-label="text">Text</ToggleButton>
-        </ToggleButtonGroup>
+        <div className="header">
+          <div className="header-row">
+            <div className="logo">
+              mappedit
+            </div>
+            <div className="blurb">
+              Location-based subreddits on a map. 
+              Data from <a href="https://www.reddit.com/r/LocationReddits/wiki/index/" target="_blank" rel="nopener noreferrer">/r/LocationReddits</a>.
+            </div>
+            <div className="blurb">
+              Bigger {view === "scatterplot" ? "circles mean": "text means"} more subscribers. Color ranges from <span className="most-active">most recently</span> to <span className="least-active">least recently</span> active.
+            </div>
+            <div className="toolbar">
+              <div className="toolbar-item">
+                <ToggleButtonGroup
+                  size="small"
+                  value={view}
+                  exclusive
+                  onChange={this.toggleView}
+                  aria-label="Map plot mode"
+                >
+                  <ToggleButton value="scatterplot" aria-label="scatterplot">Scatterplot</ToggleButton>
+                  <ToggleButton value="text" aria-label="text">Text</ToggleButton>
+                </ToggleButtonGroup>
+              </div>
+            </div>
+          </div>
+        </div>
         {places ? <Map key={view} places={places} view={view} /> : <div>Loading...</div> }
       </div>
     );
