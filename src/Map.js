@@ -482,7 +482,8 @@ class Map extends React.Component {
     return Math.sqrt(totalSubscribers)/64;
   }
 
-  unselectPlace = () => {
+  unselectPlace = (event) => {
+    event.stopPropagation();
     this.setState({selectedPlace: null});
   }
 

@@ -18,11 +18,11 @@ class InfoPopup extends React.Component {
   }
   
   render() {
-    const carousel = (
+    const carousel = this.state.subreddits.length > 1 ? (
       <Carousel defaultControlsConfig={{prevButtonOnClick: this.stopPropagation, nextButtonOnClick: this.stopPropagation}}>
         {this.state.subreddits.map((s, i) => <SubredditCard key={i} subreddit={s} />)}
       </Carousel>
-    );
+    ) : <SubredditCard key={0} subreddit={this.state.subreddits[0]} />;
     return (
       <div className="infoPopup">
         <div className="close-button">
